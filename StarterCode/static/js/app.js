@@ -10,7 +10,7 @@ function charts(selectedPatientID) {
       var labels = subject.otu_labels;
       var values = subject.sample_values;
   
-      // Horizontal Bar Char
+      // Horizontal Bar Chart
       var trace1 = {
         x: values.slice(0, 10).reverse(),
         y: ids
@@ -29,7 +29,7 @@ function charts(selectedPatientID) {
         xaxis: { autorange: true },
         yaxis: { autorange: true },
         margin: { t: 70, l: 100 },
-        height: 380,
+        height: 450,
       };
   
       Plotly.newPlot("bar", data, layout);
@@ -76,7 +76,7 @@ function charts(selectedPatientID) {
         title: "<b>Belly Button Washing Frequency</b> <br>Scrubs Per Week</br>",
         width: 350,
         height: 350,
-        margin: { t: 50, r: 25, l: 25, b: 25 },
+        margin: { t: 50, r: 20, l: 50, b: 20 },
       };
       Plotly.newPlot("gauge", guageData, layout);
     });
